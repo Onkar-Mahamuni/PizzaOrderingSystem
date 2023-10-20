@@ -1,0 +1,423 @@
+{
+	"info": {
+		"_postman_id": "fd8d2014-7571-4a4b-b2f4-3155148621ce",
+		"name": "SuccessfulAPIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24796763"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Mrudula\",\r\n    \"last_name\": \"Bhor\",\r\n    \"email\": \"mrudula@gmail.com\",\r\n    \"password\": \"abc\",\r\n    \"mobile_no\": 1234567890,\r\n    \"userRole\": \"CUSTOMER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/pizzadelivery/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pizzadelivery",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateuser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"2\",\r\n    \"first_name\": \"Krati\",\r\n    \"last_name\": \"Mahajan\",\r\n    \"email_id\": \"km@gmail.com\",\r\n    \"password\": \"km\",\r\n    \"mobile_no\": \"6546588645\",\r\n    \"userRole\": \"CUSTOMER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/pizzadelivery/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pizzadelivery",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addcategory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"categoryName\" : \"Burger1\",\r\n    \"description\" : \"Cheezy\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/pizzadelivery/category",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pizzadelivery",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addpizza",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"dsds\",\r\n\"price\":80,\r\n\"avg_rating\" : 3.8,\r\n\"summary\" : \"Ceezy\",\r\n\"Veg\" : true,\r\n\"inStock\": true,\r\n    \"pizzaCategory\": {\r\n        \"id\": 5,\r\n        \"categoryName\": \"Burger\",\r\n        \"description\": \"Cheezy\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/pizzadelivery/pizza",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pizzadelivery",
+						"pizza"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addaddress",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"city\":\"Solapur\",\r\n    \"country\":\"India\",\r\n    \"house_no\":\"3\",\r\n    \"pincode\":\"411052\",\r\n    \"state\":\"Maharashtra\",\r\n    \"street\":\"ABC\",\r\n        \"user\":{\r\n        \"id\": 3,\r\n        \"first_name\": \"Onkar\",\r\n        \"last_name\": \"Mahamuni\",\r\n        \"email_id\": \"onkarmahamuni7@gmail.com\",\r\n        \"password\": \"abc\",\r\n        \"mobile_no\": null,\r\n        \"userRole\": \"CUSTOMER\",\r\n        \"cart\": null\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/pizzadelivery/address",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pizzadelivery",
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addoffer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"happy\",\r\n    \"discount\": 15,\r\n    \"valid_upto\": \"2023-02-28\",\r\n    \"valid_from\": \"2023-01-30\",\r\n    \"code\": \"kjdhfs\",\r\n    \"terms_conditions\": \"Only for new Users for Third order!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/pizzadelivery/offer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pizzadelivery",
+						"offer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "alloffers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/pizzadelivery/offers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pizzadelivery",
+						"offers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allusers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/pizzadelivery/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pizzadelivery",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addreview",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"user\":{\r\n    \"id\": 7,\r\n    \"first_name\": \"Onkar\",\r\n    \"last_name\": \"Mahamuni\",\r\n    \"email_id\": \"onkarmahamuni725@gmail.com\",\r\n    \"password\": \"abc\",\r\n    \"mobile_no\": null,\r\n    \"userRole\": \"CUSTOMER\"\r\n},\r\n\r\n\"review\":\"best\",\r\n\"rating\":5,\r\n    \"pizza\": {\r\n        \"id\": 3,\r\n        \"name\": \"Burger1\",\r\n        \"price\": 80.0,\r\n        \"avg_rating\": 3.8,\r\n        \"summary\": \"Ceezy\",\r\n        \"inStock\": true,\r\n        \"pizzaCategory\": {\r\n            \"id\": 5,\r\n            \"categoryName\": \"Burger\",\r\n            \"description\": \"Cheezy\"\r\n        },\r\n        \"veg\": false\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/pizzadelivery/review",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pizzadelivery",
+						"review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AllOrders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/pizzadelivery/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pizzadelivery",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allcategories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/pizzadelivery/categories",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pizzadelivery",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatecat",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"categoryName\": \"Pizza3\",\r\n    \"description\": \"Cheezy\",\r\n    \"pizzas\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/pizzadelivery/category",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pizzadelivery",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email_id\": \"km@gmail.com\",\r\n    \"password\" : \"km\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/pizzadelivery/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pizzadelivery",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "alladdresses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/pizzadelivery/addresses",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pizzadelivery",
+						"addresses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addtocart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/pizzadelivery/addtocart",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pizzadelivery",
+						"addtocart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removefromcart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/pizzadelivery/removefromcart",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pizzadelivery",
+						"removefromcart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"totalItems\": 1,\r\n    \"totalCartPrice\": 240.0,\r\n    \"createdOn\": \"2023-03-01\",\r\n    \"lastUpdatedOn\": \"2023-03-02\",\r\n    \"cartOwner\": {\r\n        \"id\": 10,\r\n        \"first_name\": \"Onkar\",\r\n        \"last_name\": \"Mahamuni\",\r\n        \"email\": null,\r\n        \"password\": \"abc\",\r\n        \"mobile_no\": null,\r\n        \"userRole\": \"CUSTOMER\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/pizzadelivery/checkout",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pizzadelivery",
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
